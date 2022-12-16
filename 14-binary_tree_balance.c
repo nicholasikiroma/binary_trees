@@ -29,7 +29,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		if (tree->left)
 			left =  1 + binary_tree_height(tree->left);
 		else
-			left= 1;
+			left = 1;
 
 		if (tree->right)
 			right =  1 + binary_tree_height(tree->right);

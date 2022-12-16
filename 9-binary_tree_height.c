@@ -4,21 +4,20 @@
  * max - returns maximum value
  * @a: first input value
  * @b: second input value
- * return: max value
+ * Return: max value
  */
 int max(int a, int b)
 {
 	if (a >= b)
-		return a;
+		return (a);
 	else
-		return b;
+		return (b);
 }
 
 /**
  * binary_tree_height - measures the height of a binary tree
  * @tree: pointer to the root node of the tree to traverse
- * @func: pointer to a function to call for each node
- * return: nothing
+ * Return: height of tree
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
@@ -28,5 +27,6 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	else if (tree->left == NULL && tree->right == NULL)
 		return (0);
 
-	return 1 + max(binary_tree_height(tree->left), binary_tree_height(tree->left));
+	return (1 + max(binary_tree_height(tree->left),
+				binary_tree_height(tree->left)));
 }
